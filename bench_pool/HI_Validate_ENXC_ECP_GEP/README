@@ -1,0 +1,2 @@
+Title: Check for the implementation of various effective potentials originated from ECP
+Regex: RMSDs\sbetween\s\(ECP, ENXC\)\sand\s\(ECP, GEP\):\s\(\s*(?P<rmsd1>\d+.\d+),\s*(?P<rmsd2>\d+.\d+)\)

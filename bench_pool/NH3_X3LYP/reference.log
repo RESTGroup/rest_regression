@@ -1,0 +1,77 @@
+Print level:                1
+The number of threads used for parallelism:      1
+The spheric-GTO basis set is taken from cc-pVDZ
+The pruning method will be nwchem
+The radial grid generation method will be treutler
+ERI Type: ri_v
+Turn on the basis pair symmetry for RI 3D-tensors
+The spheric-GTO auxiliary basis set is taken from def2-SV(P)-JKFIT
+The exchange-correlation method: x3lyp
+Spin polarization: Off
+Charge:   0; Spin:   1
+min_num_angular_points: 110
+max_num_angular_points: 590
+hardness: 3
+Grid generation level: 3
+Even tempered basis generation: false
+SCF convergency thresholds: 1e-8 for density matrix
+                            1e-6 Ha. for sum of eigenvalues
+                            1e-8 Ha. for total energy
+Max. SCF cycle number:      100
+The diis mixing with (param, max_vec_len) = (0.2, 8) is employed for the SCF procedure
+Turn on the diis mixing after 1 step(s) of SCF iteractions with the linear mixing
+The specified checkfile exists but is not loaded because the keyword 'external_init_guess' is specified
+It will be updated after the SCF procedure 
+(none)
+Initial guess is prepared by (sad).
+It is a cluster calculation for finite molecules
+the functional of 'x3lyp' contains
+The density functional 'X3LYP' belongs to the 'Hybrid GGA' family and is defined in the reference(s):
+(0): X. Xu and W. A. Goddard, Proc. Natl. Acad. Sci. U. S. A. 101, 2673 (2004)
+The counted start_mo for the frozen-core post-scf methods 0 is larger than the number of ecp orbitals 0. Take the start_mo -= ecp_orbitals
+Libxc version used in REST: 5.2.3
+nbas: 9, natm: 4 for standard basis sets
+First valence state for the frozen-core algorithm:     0
+final nbas: 52,final natm: 8
+numbasis: 29, num_auxbas: 131
+Molecule_name: NH3
+Restricted Hartree-Fock (or Kohn-Sham) algorithm is invoked.
+Nuc_energy: 11.847923728239245
+Overlap matrix is nonsigular:
+  Lowest eigenvalue:       0.01677135 with the total number of basis functions:     29
+Grid size: 44118
+Generate SAD of N
+Generate SAD of H
+Initial guess HF energy:     -56.5156710578170305
+The total energy:       -56.3666223320 Ha by the initial guess
+Energy:     -56.2518475949 Ha with <S^2> =  7.500 and <Sz> =  0.000 after    1 iterations (in       0.26 seconds).
+SCF Change: DM 8.21256e-2; eev  1.29771e0 Ha; etot 1.69182e-1 Ha
+Energy:     -56.0826651376 Ha with <S^2> =  7.500 and <Sz> =  0.000 after    2 iterations (in       0.25 seconds).
+SCF Change: DM 5.80804e-3; eev 7.11597e-2 Ha; etot -4.38742e-1 Ha
+Energy:     -56.5214067004 Ha with <S^2> =  7.500 and <Sz> =  0.000 after    3 iterations (in       0.26 seconds).
+SCF Change: DM 1.21590e-4; eev 1.67699e-3 Ha; etot -2.54640e-3 Ha
+Energy:     -56.5239531053 Ha with <S^2> =  7.500 and <Sz> =  0.000 after    4 iterations (in       0.26 seconds).
+SCF Change: DM 3.11350e-5; eev 5.19937e-4 Ha; etot -1.71393e-6 Ha
+Energy:     -56.5239548193 Ha with <S^2> =  7.500 and <Sz> =  0.000 after    5 iterations (in       0.27 seconds).
+SCF Change: DM 9.66212e-6; eev 1.55877e-4 Ha; etot -1.41996e-7 Ha
+Energy:     -56.5239549612 Ha with <S^2> =  7.500 and <Sz> =  0.000 after    6 iterations (in       0.25 seconds).
+SCF Change: DM 5.57916e-7; eev 2.49421e-6 Ha; etot -7.07189e-9 Ha
+Energy:     -56.5239549683 Ha with <S^2> =  7.500 and <Sz> =  0.000 after    7 iterations (in       0.26 seconds).
+SCF Change: DM 2.80397e-8; eev 2.10562e-7 Ha; etot -1.04450e-11 Ha
+Energy:     -56.5239549683 Ha with <S^2> =  7.500 and <Sz> =  0.000 after    8 iterations (in       0.26 seconds).
+SCF Change: DM 3.00877e-9; eev 5.66240e-8 Ha; etot 8.52651e-14 Ha
+Energy:     -56.5239549683 Ha with <S^2> =  7.500 and <Sz> =  0.000 after    9 iterations (in       0.29 seconds).
+SCF is converged after    9 iterations.
+Mulliken population analysis:
+  0-N  :  -0.228306
+  1-H  :   0.076102
+  2-H  :   0.076102
+  3-H  :   0.076102
+
+====================================================
+              REST: Mission accomplished
+====================================================
+The SCF energy        :     -56.5239549683 Ha
+Detailed time report:
+Overall   |:   11.503 s for the whole job
+SCF       |:   11.451 s for the scf procedure

@@ -1,0 +1,20 @@
+[ctrl]
+     # MP2 calculation, the default setting: [RI-V, SAD, DIIS, Spheric]
+     num_threads =          4
+     print_level =          2            # print level: 1 for the simplest output
+     xc =                   "mp2"        # indicating that the MP2 method is invoked
+     basis_path =           "cc-pVDZ"
+     auxbas_path =          "def2-SV(P)-JKFIT"
+     charge =               0.0
+     spin =                 1.0
+     spin_polarization =    false
+
+ [geom]
+     name = "H2, example"
+     unit = "Angstrom"
+     position = '''
+             H,   0.0000000000,      0.0000000000,      0.0000000000
+             H,   0.7600000000,      0.0000000000,      0.0000000000
+             '''
+     
+

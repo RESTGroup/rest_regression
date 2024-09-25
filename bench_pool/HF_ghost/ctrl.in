@@ -1,0 +1,29 @@
+[ctrl]
+     print_level =               2
+     num_threads =               4
+     xc =                        "hf" 
+     basis_path =                "./cc-pVDZ"
+     auxbas_path =               "./def2-SV(P)-JKFIT" 
+     charge =                    0.0
+     spin =                      1.0
+     spin_polarize =             false
+     initial_guess =             "hcore"
+     #outputs =                   ["dipole"]
+
+[geom]
+     name = "HF"
+     unit = "angstrom"
+     position = '''
+        H  0.00000000000      0.0000000000      0.0000000000
+        F  0.00000000000      0.0000000000      1.0000000000
+        '''
+     ghost = '''
+      # <ghost type>      <elem>               <position>
+        basis set             Cl           0.000000   0.00000    1.6000000
+      #                 <charge>
+        point charge        -0.3           0.500000   0.60000    0.8000000
+        point charge         1.5           0.200000   0.30000    1.1000000
+      ##                 <file_name>
+        potential       O_ghost.json       0.500000   0.60000    0.8000000
+        potential       Mg_ghost.json      0.200000   0.30000    1.1000000
+     '''

@@ -1,0 +1,24 @@
+{
+    "enxc_potentials": [
+		{
+            "angular_momentum": [
+                4
+            ],
+            "coefficients": [
+                [
+                    "0.00000000"
+                ]
+            ],
+            "ecp_type": "scalar_ecp",
+            "r_exponents": [
+                2
+            ],
+            "gaussian_exponents": [
+                "1.00000000"
+            ]
+        }
+	], 
+	"elem_type": "H",
+    "position": ["0.00000",     "0.000",     "0.000"],
+	"atm_index": 0
+}

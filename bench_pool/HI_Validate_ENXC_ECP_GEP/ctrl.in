@@ -1,0 +1,23 @@
+[ctrl]
+     print_level =               0
+     num_threads =               4
+     xc =                        "hf" 
+     basis_path =                "cc-pVDZ"
+     auxbas_path =               "def2-SV(P)-JKFIT" 
+     charge =                    0.0
+     spin =                      1.0
+     spin_polarization =         false
+     bench_eps =                 true
+
+[geom]
+     name = "HI"
+     unit = "angstrom"
+     position = '''
+        H  0.00000000000      0.0000000000      0.0000000000
+        I  0.00000000000      0.0000000000      3.0000000000
+     '''
+     ghost = '''
+      # <ghost type>    <file_name>      <position>
+      #                 
+        potential       I_ghost.json     0.000000   0.00000    3.0000000
+     '''

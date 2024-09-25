@@ -1,0 +1,22 @@
+[ctrl]
+     # 设置程序输出的程度，缺省为1
+     print_level =               2
+     # 设置Rayon和OpenMP的并行数，缺省为1
+     num_threads =               4
+     # 设置使用的电子结构方法，缺省为HF
+     xc =                        "hf" 
+     basis_path =                "cc-pVDZ"
+     auxbas_path =               "def2-SV(P)-JKFIT" 
+     charge =                    0.0
+     spin =                      1.0
+     spin_polarization =         false
+     outputs =                   ["dipole"]
+
+[geom]
+     name = "CO"
+     unit = "angstrom"
+     position = '''
+        C  0.00000000000      0.0000000000      0.0000000000
+        O  1.30000000000      0.0000000000      0.0000000000
+     '''
+

@@ -1,0 +1,21 @@
+[ctrl]
+     # MP2 calculation, the default setting: [RI-V, SAD, DIIS, Spheric]
+     num_threads =          4
+     print_level =          2            # print level: 1 for the simplest output
+     xc =                   "mp2"        # indicating that the MP2 method is invoked
+     basis_path =           "cc-pVDZ"
+     auxbas_path =          "def2-SV(P)-JKFIT"
+     initial_guess =        "sad"
+     charge =               0.0
+     spin =                 3.0
+     spin_polarization =    true
+
+ [geom]
+     name = "O2, example"
+     unit = "Angstrom"
+     position = '''
+             O    0.0000000000       0.0000000000       0.0000000000
+             O    1.2080000000       0.0000000000       0.0000000000
+             '''
+     
+

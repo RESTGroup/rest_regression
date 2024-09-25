@@ -1,0 +1,27 @@
+[ctrl]
+     # 设置程序输出的程度，缺省为1
+     print_level =               2
+     # 设置Rayon和OpenMP的并行数，缺省为1
+     num_threads =               4
+     # 设置使用的电子结构方法，缺省为HF
+     xc =                        "b3lyp"
+     occupation_type =           "integer"
+     basis_path =                "cc-pVDZ"
+     auxbas_path =               "def2-SV(P)-JKFIT" 
+     charge =                    0.0
+     spin =                      1.0
+     spin_polarization =         true
+     initial_guess =             "sad"
+     chkfile =                   "restart"
+     chkfile_type =              "hdf5"
+
+[geom]
+     name = "H2O"
+     unit = "angstrom"
+     position = '''
+        O      0.455690      -0.855147      -1.077445
+        H      0.170794      -1.689090      -1.471455
+        H      1.416521      -0.938770      -1.036458
+    '''
+     
+

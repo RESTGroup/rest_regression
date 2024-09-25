@@ -1,0 +1,12 @@
+[package]
+name = "rest_regression"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+regex = "1.10.5"
+anyhow = "1.0.86"
+clap = "4.5.11"
+rayon = "1.10.0"
+walkdir = "2.5.0"
+chrono = "0.4.38"

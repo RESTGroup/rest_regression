@@ -1,0 +1,22 @@
+[ctrl]
+     print_level =               2
+     num_threads =               4
+     xc =                        "R-xDH7"
+     #post_ai_correction  =       "scc15"
+     frozen_core_postscf =       0
+     frequency_points =          40
+     basis_path =                "cc-pVDZ"
+     auxbas_path =               "def2-SV(P)-JKFIT" 
+     charge =                    0.0
+     spin =                      3.0
+     spin_polarization =         true
+
+[geom]
+    name = "O2, example"
+    unit = "Angstrom"
+    position = '''
+            O    0.0000000000       0.0000000000       0.0000000000
+            O    1.2080000000       0.0000000000       0.0000000000
+            '''
+
+

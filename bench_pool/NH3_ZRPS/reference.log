@@ -1,0 +1,107 @@
+=========================================================
+Input parameters for the REST calculation
+=========================================================
+Calculation type: Single-point energy
+The exchange-correlation method: zrps
+Print level:                1
+The number of threads used for parallelism:      4
+The spheric-GTO basis set is taken from cc-pVDZ
+The pruning method is nwchem
+The radial grid generation method is treutler
+ERI Type: ri_v
+Turn on the basis pair symmetry for RI 3D-tensors
+The spheric-GTO auxiliary basis set is taken from def2-SV(P)-JKFIT
+Spin polarization: Off
+Charge:   0; Spin:   1
+min_num_angular_points: 110
+max_num_angular_points: 590
+hardness: 3
+Grid generation level: 3
+Even tempered basis generation: false
+SCF convergency thresholds: 1e-8 for density matrix
+                            1e-6 Ha. for sum of eigenvalues
+                            1e-8 Ha. for total energy
+Max. SCF cycle number:      100
+The diis mixing with (param, max_vec_len) = (0.2, 8) is employed for the SCF procedure
+Turn on the diis mixing after 1 step(s) of SCF iteractions with the linear mixing
+The specified checkfile exists but is not loaded because the keyword 'external_init_guess' is specified
+It will be updated after the SCF procedure 
+(none)
+Initial guess is prepared by (sad).
+It is a finite cluster calculation
+the scf functional for 'zrps' contains
+The density functional 'PBEH (PBE0)' belongs to the 'Hybrid GGA' family and is defined in the reference(s):
+(0): C. Adamo and V. Barone, J. Chem. Phys. 110, 6158 (1999)
+(1): M. Ernzerhof and G. E. Scuseria, J. Chem. Phys. 110, 5029 (1999)
+the post-scf functional 'zrps' is employed, which contains
+The density functional 'Perdew, Burke & Ernzerhof' belongs to the 'GGA' family and is defined in the reference(s):
+(0): J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+(1): J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 78, 1396 (1997)
+The density functional 'Perdew, Burke & Ernzerhof' belongs to the 'GGA' family and is defined in the reference(s):
+(0): J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996)
+(1): J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 78, 1396 (1997)
+For SCF calculation, no core orbital is frozen by effective core potential (ECP) approximation
+Libxc version used in REST: 5.2.3
+nbas: 9, natm: 4 for standard basis sets
+First valence state for the frozen-core algorithm:     0
+final nbas: 109,final natm: 8
+numbasis: 29, num_auxbas: 308
+Molecule_name: NH3
+Restricted Hartree-Fock (or Kohn-Sham) algorithm is invoked.
+Nuc_energy:      11.84792373 Hartree
+No ghost effective potential
+No ghost point charges
+Overlap matrix is nonsigular:
+  Lowest eigenvalue:       0.01677135 with the total number of basis functions:     29
+Grid size: 44118
+Generate SAD of N
+Generate SAD of H
+Error happens when inversing the matrix. dgetrf info: 2; dgetri info: 2
+WARNING: fail to obtain the DIIS coefficients. Turn to use the linear mixing algorithm, and re-invoke DIIS  8 steps later
+Initial guess HF energy:     -56.4760690701856163
+The total energy:       -56.3499693032 Ha by the initial guess
+Energy:     -56.2844821603 Ha after    1 iterations (in       0.02 seconds).
+SCF Change: DM 6.44498e-2; eev  1.09378e0 Ha; etot 9.32962e-2 Ha
+Energy:     -56.1911860021 Ha after    2 iterations (in       0.02 seconds).
+SCF Change: DM 3.71761e-3; eev 5.03555e-2 Ha; etot -2.92227e-1 Ha
+Energy:     -56.4834126121 Ha after    3 iterations (in       0.02 seconds).
+SCF Change: DM 1.05633e-4; eev 1.83268e-3 Ha; etot -1.01640e-3 Ha
+Energy:     -56.4844290103 Ha after    4 iterations (in       0.02 seconds).
+SCF Change: DM 1.92111e-5; eev 3.69708e-4 Ha; etot -1.72178e-6 Ha
+Energy:     -56.4844307321 Ha after    5 iterations (in       0.02 seconds).
+SCF Change: DM 3.69160e-6; eev 4.09080e-5 Ha; etot -3.84839e-8 Ha
+Energy:     -56.4844307706 Ha after    6 iterations (in       0.02 seconds).
+SCF Change: DM 3.94252e-7; eev 6.04434e-6 Ha; etot -8.68198e-10 Ha
+Energy:     -56.4844307714 Ha after    7 iterations (in       0.02 seconds).
+SCF Change: DM 1.25599e-8; eev 2.69611e-7 Ha; etot -9.13758e-12 Ha
+Energy:     -56.4844307714 Ha after    8 iterations (in       0.02 seconds).
+SCF Change: DM 2.92206e-9; eev 5.68418e-8 Ha; etot -9.94760e-14 Ha
+Energy:     -56.4844307714 Ha after    9 iterations (in       0.03 seconds).
+SCF is converged after    9 iterations.
+==========================================
+Now evaluate the  SBGE2 correlation energy
+==========================================
+For (alpha, alpha)
+Print the correlation energies for each electron-pair:
+----------------------------------------------------------------------
+Methods         :       Total Corr,          OS Corr,          SS Corr
+----------------------------------------------------------------------
+SBGE2           :      -0.25597386,      -0.19732392,      -0.05864994
+----------------------------------------------------------------------
+Fifth-rung correlation energy :      -0.049330980289 Ha
+E[ZRPS ]=:     -56.46287471 Ha, Ex[HF]:      -7.67744348 Ha, Ec[SBGE2]:      -0.25597386 Ha
+Mulliken population analysis:
+  0-N  :  -0.271506
+  1-H  :   0.090502
+  2-H  :   0.090502
+  3-H  :   0.090502
+
+====================================================
+              REST: Mission accomplished
+====================================================
+The SCF energy        :     -56.4844307714 Ha
+The (R)-xDH energy    :     -56.4628747132 Ha
+Detailed time report:
+SCF       |:    0.498 s for the scf procedure
+Overall   |:    1.678 s for the whole job
+PT2       |:    0.038 s for the PT2 evaluation

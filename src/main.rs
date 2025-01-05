@@ -1,6 +1,7 @@
 use clap::{Arg, ArgMatches, Command};
 use anyhow;
 use regex::Regex;
+//use core::num;
 use std::{collections::HashMap, env, fs::{self, File}, io::{BufRead, Read, Write}, path::Path};
 use std::process::Command as ProcessCommand;
 use walkdir::WalkDir;
@@ -33,6 +34,12 @@ pub fn parse_input() -> ArgMatches {
              .short('p')
              .long("rest_path")
              .help("The absolute path to find the `rest` binary [default: $REST_HOME/target/`rest_mode`/rest]")
+        )
+        .arg(Arg::new("n_mpi")
+             .short('n')
+             .long("n_mpi")
+             .default_value("1")
+             .help("The number of mpi tasks")
         )
         //.arg(Arg::new("task_status")
         //     .short('s')
@@ -178,6 +185,7 @@ fn main() -> anyhow::Result<()> {
     //let current_directory = env::current_dir().unwrap().as_os_str().to_os_string().to_str().unwrap().to_string();
     let current_directory = env::current_dir().unwrap().to_str().unwrap().to_string();
     let curr_path = Path::new(&current_directory);
+    
 
     let rest_home = match env::var_os("REST_HOME") {
         Some(val) => val,
@@ -195,6 +203,10 @@ fn main() -> anyhow::Result<()> {
     let work_folder = parse_input().get_one::<String>("working_directory").unwrap().to_string();
     let work_path = Path::new(&work_folder);
 
+    let num_mpi = parse_input().get_one::<String>("n_mpi").unwrap().parse::<usize>().unwrap();
+    println!("num_mpi = {}", num_mpi);
+
+
     fs::create_dir(work_path).unwrap_or(());
     //fs::create_dir(work_path).unwrap_err();
 
@@ -202,6 +214,10 @@ fn main() -> anyhow::Result<()> {
     let rest_default_cmd = format!("{}/target/{}/rest", rest_home.to_str().unwrap(), &rest_mode);
 
     let rest_cmd = parse_input().get_one::<String>("rest_path").unwrap_or(&rest_default_cmd).to_string();
+    //} else {
+    //    let rest_cmd_pure = parse_input().get_one::<String>("rest_path").unwrap_or(&rest_default_cmd).to_string();
+    //    format!("mpirun -n {} {}", &num_mpi, &rest_cmd_pure)
+    //};
     if ! std::path::Path::new(&rest_cmd).is_file() {
         panic!("The REST binary \'{}\' does not exist", &rest_cmd);
     }
@@ -259,6 +275,7 @@ fn main() -> anyhow::Result<()> {
                     panic!("{} not found in {}", line, entry.path().display());
                 }
                 job_list.push(line.to_string());
+                println!("{}", line);
             }
         } else {
             if ! is_file_exist_in_dir(entry.path(), "ctrl.in").unwrap() {
@@ -268,9 +285,16 @@ fn main() -> anyhow::Result<()> {
         }
 
         let mut output_string = String::new();
+        //println!("debug job_list {:?}", &job_list);
         for job in job_list {
-            let output = ProcessCommand::new(rest_cmd.as_str())
-                .arg("-i").arg(job).output().unwrap();
+            let output = if num_mpi == 1 {
+                ProcessCommand::new(rest_cmd.as_str())
+                    .arg("-i").arg(job).output().unwrap()
+            } else {
+                ProcessCommand::new("mpirun").arg("-n").arg(format!("{}",&num_mpi).as_str())
+                    .arg(rest_cmd.as_str())
+                    .arg("-i").arg(job).output().unwrap()
+            };
             output_string = String::new();
             for line in output.stdout.lines() {
                 output_string.push_str(line.unwrap().as_str());

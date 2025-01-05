@@ -1,0 +1,22 @@
+[ctrl]
+     # 设置程序输出的程度，缺省为1
+     print_level =               2
+     # 设置Rayon和OpenMP的并行数，缺省为1
+     num_threads =               4
+     xc =                        "x3lyp" 
+     # 设置（辅助）基组的路径。如果找不到该路径，则创建该路径，并从BSE下载
+     # 注意：计算节点需支持连接外网。
+     basis_path =                "./cc-pVDZ"
+     auxbas_path =               "./def2-SV(P)-JKFIT" 
+     charge =                    0.0
+     spin =                      3.0
+     spin_polarization =         true
+     initial_guess =             "sad"
+
+[geom]
+     name = "H2"
+     unit = "angstrom"
+     position = '''
+        H   0.0000000000      0.0000000000      0.0000000000
+        H   3.7000000000      0.0000000000      0.0000000000'''
+

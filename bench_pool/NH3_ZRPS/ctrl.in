@@ -1,9 +1,8 @@
 [ctrl]
      print_level =               1
-     num_threads =               2
-     job_type =                  "energy"
-     xc =                        "x3lyp"
-     empirical_dispersion =      "d3bj"
+     num_threads =               4
+     xc =                        "ZRPS"
+     frozen_core_postscf =       0
      basis_path =                "cc-pVDZ"
      auxbas_path =               "def2-SV(P)-JKFIT" 
      # 使用resolution-of-identity (RI)技术处理四中心积分（缺省）
@@ -12,7 +11,6 @@
      charge =                    0.0
      spin =                      1.0
      spin_polarization =         false
-     #use_dm_only =               true
 
 [geom]
      name = "NH3"

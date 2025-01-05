@@ -1,8 +1,8 @@
 [ctrl]
      # MP2 calculation, the default setting: [RI-V, SAD, DIIS, Spheric]
      num_threads =          4
-     print_level =          2            # print level: 1 for the simplest output
-     xc =                   "mp2"        # indicating that the MP2 method is invoked
+     print_level =          1              # print level: 1 for the simplest output
+     xc =                   "ZRPS"        # indicating that the MP2 method is invoked
      basis_path =           "cc-pVDZ"
      auxbas_path =          "def2-SV(P)-JKFIT"
      initial_guess =        "sad"
